@@ -105,8 +105,14 @@ public class Tower : MonoBehaviour
 
     private void Attack()
     {
-        //GameObject proj = Instantiate(projectilePrefab, projectileSpawnPos.position, Quaternion.identity);
-        //proj.GetComponent<Projectile>().Initialize(curEnemy, projectileDamage, projectileSpeed);
+        if (rotateTowardsTarget)
+        {
+            transform.LookAt(curEnemy.transform);
+            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+        }
+
+        GameObject proj = Instantiate(projectilePrefab, projectileSpawnPos.position, Quaternion.identity);
+        proj.GetComponent<Projectile>().Initialize(curEnemy, projectileDamage, projectileSpeed);
     }
 
     private void OnTriggerEnter (Collider other)

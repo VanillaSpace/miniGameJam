@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class CastleProjectile : MonoBehaviour
 {
     private Enemy target;
     private int damage;

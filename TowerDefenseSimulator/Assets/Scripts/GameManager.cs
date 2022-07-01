@@ -28,7 +28,10 @@ public class GameManager : MonoBehaviour
 
     void UpdateHealthAndMoneyText()
     {
-        healthAndMoneyText.text = $"Health: {health}\nMoney: ${money}";
+        if(healthAndMoneyText != null)
+        {
+            healthAndMoneyText.text = $"Health: {health}\nMoney: ${money}";
+        }
     }
     public void AddMoney(int amount)
     {
