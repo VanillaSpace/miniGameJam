@@ -23,6 +23,7 @@ public class WaveSpawner : MonoBehaviour
     {
         Enemy.OnDestroyed -= OnEnemyDestroyed;
     }
+
     public void SpawnNextWave()
     {
         curWave++;

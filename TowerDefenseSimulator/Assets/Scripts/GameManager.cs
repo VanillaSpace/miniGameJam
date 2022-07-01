@@ -26,6 +26,11 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
+    void Start ()
+    {
+        UpdateHealthAndMoneyText();
+    }
+
     void UpdateHealthAndMoneyText()
     {
         if(healthAndMoneyText != null)
