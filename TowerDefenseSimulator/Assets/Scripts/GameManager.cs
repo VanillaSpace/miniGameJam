@@ -2,18 +2,64 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int health;
+    public int money;
+    private bool gameActive;
+
+    [Header("Components")]
+    public TextMeshProUGUI healthAndMoneyText;
+
+    [Header("Events")]
+    public UnityEvent onEnemyDestoryed;
+    public UnityEvent onMoneyChanged;
+    
+    // Singleton
+    public static GameManager instance;
+
+    void Awake()
     {
-        
+        instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    void UpdateHealthAndMoneyText()
     {
-        
+        healthAndMoneyText.text = $"Health: {health}\nMoney: ${money}";
+    }
+    public void AddMoney(int amount)
+    {
+        money += amount;
+        UpdateHealthAndMoneyText();
+        onMoneyChanged.Invoke();
+    }
+    public void TakeMoney(int amount)
+    {
+        money -= amount;
+        UpdateHealthAndMoneyText();
+        onMoneyChanged.Invoke();
+    }
+
+    public void TakeDamage(int amount)
+    {
+        health -= amount;
+        UpdateHealthAndMoneyText();
+        if (health <= 0)
+            GameOver();
+    }
+    void GameOver()
+    {
+        gameActive = false;
+    }
+    void WinGame()
+    {
+        gameActive = false;
+    }
+
+    public void OnEnemyDestroyed()
+    {
+
     }
 }
