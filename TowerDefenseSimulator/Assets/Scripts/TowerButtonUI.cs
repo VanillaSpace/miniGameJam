@@ -32,6 +32,12 @@ public class TowerButtonUI : MonoBehaviour
         OnMoneyChanged();
     }
 
+    public void OnClick()
+    {
+        GameManager.instance.towerPlacement.SelectTowerToPlace(tower);
+        Debug.Log("Pressed");
+    }
+
     void OnMoneyChanged()
     {
         button.interactable = GameManager.instance.money >= tower.cost;

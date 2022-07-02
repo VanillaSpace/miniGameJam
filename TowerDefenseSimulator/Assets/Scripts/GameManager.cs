@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     [Header("Components")]
     public TextMeshProUGUI healthAndMoneyText;
     public EnemyPath enemyPath;
+    public TowerPlacement towerPlacement;
 
     [Header("Events")]
     public UnityEvent onEnemyDestoryed;
