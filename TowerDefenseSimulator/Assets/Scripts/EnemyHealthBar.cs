@@ -22,15 +22,22 @@ public class EnemyHealthBar : MonoBehaviour
 
     void Update()
     {
-        if (enemy != null)
+        if(GameManager.instance.GetActivateGame() == false)
         {
-            fill.fillAmount = (float)enemy.health / (float)startHealth;
-            fill.color = colorGradient.Evaluate(fill.fillAmount);
-            transform.position = cam.WorldToScreenPoint(enemy.transform.position) + new Vector3(0, Screen.height / 30.0f);
+            Destroy(gameObject);
         }
         else
         {
-            Destroy(gameObject);
+            if (enemy != null)
+            {
+                fill.fillAmount = (float)enemy.health / (float)startHealth;
+                fill.color = colorGradient.Evaluate(fill.fillAmount);
+                transform.position = cam.WorldToScreenPoint(enemy.transform.position) + new Vector3(0, Screen.height / 30.0f);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

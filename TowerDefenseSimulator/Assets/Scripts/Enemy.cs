@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
     public int moneyOnDeath;
     public float moveSpeed;
 
+    public Canvas parentInCanvas;
+
     // pathing
     private Transform[] path;
     private int curPathWaypoint;

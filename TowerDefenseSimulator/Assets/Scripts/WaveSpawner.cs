@@ -75,9 +75,17 @@ public class WaveSpawner : MonoBehaviour
     public void OnEnemyDestroyed()
     {
         remainingEnemies--;
-        if (remainingEnemies == 0)
+
+        if (remainingEnemies == 0 && curWave == waves.Length)
         {
-            nextWaveButton.SetActive(true);
+            GameManager.instance.WinGame();
+        }
+        else
+        {
+            if (remainingEnemies == 0)
+            {
+                nextWaveButton.SetActive(true);
+            }
         }
     }
 }

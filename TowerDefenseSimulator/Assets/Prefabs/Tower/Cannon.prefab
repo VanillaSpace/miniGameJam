@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 2
-  targetPriority: 2
+  targetPriority: 0
   rotateTowardsTarget: 1
   attackRate: 0.5
   projectilePrefab: {fileID: 4564923612852678205, guid: b0088733e8c56bc4c9e7cf3f439d6b39, type: 3}
