@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -20,11 +21,20 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         path = GameManager.instance.enemyPath.waypoints;
+
+        CreateHealthBar();
     }
 
     void Update()
     {
         MoveAlongPath();
+    }
+
+    void CreateHealthBar()
+    {
+        Canvas canvas = FindObjectOfType<Canvas>();
+        GameObject healthBar = Instantiate(healthBarPrefab, canvas.transform);
+        healthBar.GetComponent<EnemyHealthBar>().Initialize(this);
     }
 
     // called every frame to move the enemy towards the end of the path

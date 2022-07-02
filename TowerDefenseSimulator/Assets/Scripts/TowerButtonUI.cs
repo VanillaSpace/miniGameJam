@@ -35,7 +35,6 @@ public class TowerButtonUI : MonoBehaviour
     public void OnClick()
     {
         GameManager.instance.towerPlacement.SelectTowerToPlace(tower);
-        Debug.Log("Pressed");
     }
 
     void OnMoneyChanged()

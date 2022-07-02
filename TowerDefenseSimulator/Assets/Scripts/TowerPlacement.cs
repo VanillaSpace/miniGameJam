@@ -65,7 +65,14 @@ public class TowerPlacement : MonoBehaviour
 
     void PlaceTower()
     {
+        Vector3 pos = curSelectedTile.transform.position + new Vector3(0, towerPlaceYOffset, 0);
+        GameObject tower = Instantiate(towerToPlaceDown.spawnPrefab, pos, Quaternion.identity);
 
+        curSelectedTile.tower = tower.GetComponent<Tower>();
+
+        GameManager.instance.TakeMoney(towerToPlaceDown.cost);
+        
+        CancelPlacement();
     }
 
     void CancelPlacement()

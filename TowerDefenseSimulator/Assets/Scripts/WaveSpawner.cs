@@ -23,12 +23,29 @@ public class WaveSpawner : MonoBehaviour
     {
         Enemy.OnDestroyed -= OnEnemyDestroyed;
     }
+    void Start()
+    {
+        UpdateWaveText();
+    }
+
+    void UpdateWaveText ()
+    {
+        if(curWave == 0)
+        {
+            waveText.text = "Prepare & press on Next Wave when you're ready!";
+        }
+        else
+        {
+            waveText.text = $"WAVE: {curWave}";
+        }
+
+    }
 
     public void SpawnNextWave()
     {
         curWave++;
         if (curWave - 1 == waves.Length) { return; }
-        waveText.text = $"Wave: {curWave}";
+        UpdateWaveText();
         StartCoroutine(SpawnWave());
     }
 
