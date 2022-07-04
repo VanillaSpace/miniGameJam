@@ -10,8 +10,7 @@ public class Enemy : MonoBehaviour
     public int damageToPlayer;
     public int moneyOnDeath;
     public float moveSpeed;
-
-    public Canvas parentInCanvas;
+    public bool isFinalBoss;
 
     // pathing
     private Transform[] path;
@@ -26,6 +25,7 @@ public class Enemy : MonoBehaviour
 
         CreateHealthBar();
     }
+
 
     void Update()
     {
@@ -76,6 +76,13 @@ public class Enemy : MonoBehaviour
         health -= amount;
         if (health <= 0)
         {
+            if (isFinalBoss)
+            {
+                GameManager.instance.WinGame();
+                Destroy(gameObject);
+                return;
+            }
+
             GameManager.instance.AddMoney(moneyOnDeath);
             OnDestroyed.Invoke();
             Destroy(gameObject);

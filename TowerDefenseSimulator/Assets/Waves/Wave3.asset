@@ -14,29 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySets:
   - enemyPrefab: {fileID: 2229845396209512338, guid: 6384374895869cc4b90eb8965f3f672d, type: 3}
-    spawnCount: 2
+    spawnCount: 5
     spawnDelay: 0
-    spawnRate: 1
-  - enemyPrefab: {fileID: 2229845396209512338, guid: 095f352b225a0cd4597fdb248d950a7b, type: 3}
-    spawnCount: 2
-    spawnDelay: 0
-    spawnRate: 1
-  - enemyPrefab: {fileID: 2229845396209512338, guid: 6384374895869cc4b90eb8965f3f672d, type: 3}
-    spawnCount: 10
-    spawnDelay: 0
-    spawnRate: 1
+    spawnRate: 0.3
   - enemyPrefab: {fileID: 2229845396209512338, guid: 095f352b225a0cd4597fdb248d950a7b, type: 3}
     spawnCount: 5
     spawnDelay: 0
-    spawnRate: 1
+    spawnRate: 0.35
   - enemyPrefab: {fileID: 2229845396209512338, guid: cb51afa65cf64024e85e96a280fbfa95, type: 3}
     spawnCount: 5
     spawnDelay: 0
-    spawnRate: 1
-  - enemyPrefab: {fileID: 2229845396209512338, guid: 095f352b225a0cd4597fdb248d950a7b, type: 3}
-    spawnCount: 3
+    spawnRate: 0.8
+  - enemyPrefab: {fileID: 2229845396209512338, guid: 6384374895869cc4b90eb8965f3f672d, type: 3}
+    spawnCount: 10
     spawnDelay: 0
-    spawnRate: 1
+    spawnRate: 0.5
+  - enemyPrefab: {fileID: 2229845396209512338, guid: 095f352b225a0cd4597fdb248d950a7b, type: 3}
+    spawnCount: 5
+    spawnDelay: 0
+    spawnRate: 0.5
+  - enemyPrefab: {fileID: 2229845396209512338, guid: 095f352b225a0cd4597fdb248d950a7b, type: 3}
+    spawnCount: 5
+    spawnDelay: 0
+    spawnRate: 0.8
   - enemyPrefab: {fileID: 2229845396209512338, guid: cb51afa65cf64024e85e96a280fbfa95, type: 3}
     spawnCount: 10
     spawnDelay: 0

@@ -79,12 +79,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 2
-  targetPriority: 0
+  targetPriority: 1
   rotateTowardsTarget: 1
-  attackRate: 0.5
+  attackRate: 1.2
   projectilePrefab: {fileID: 4564923612852678205, guid: b0088733e8c56bc4c9e7cf3f439d6b39, type: 3}
   projectileSpawnPos: {fileID: 11084838859023946}
-  projectileDamage: 1
+  projectileDamage: 3
   projectileSpeed: 6
 --- !u!135 &11084839920864301
 SphereCollider:

@@ -23,6 +23,7 @@ public class WaveSpawner : MonoBehaviour
     {
         Enemy.OnDestroyed -= OnEnemyDestroyed;
     }
+
     void Start()
     {
         UpdateWaveText();
@@ -32,7 +33,7 @@ public class WaveSpawner : MonoBehaviour
     {
         if(curWave == 0)
         {
-            waveText.text = "Prepare & press on Next Wave when you're ready!";
+            waveText.text = "Oh no, purple tiles are infected, can't place towers there... \n\n Prepare & press on Next Wave when you're ready!";
         }
         else
         {
@@ -76,16 +77,9 @@ public class WaveSpawner : MonoBehaviour
     {
         remainingEnemies--;
 
-        if (remainingEnemies == 0 && curWave == waves.Length)
+        if (remainingEnemies == 0 && curWave < waves.Length)
         {
-            GameManager.instance.WinGame();
-        }
-        else
-        {
-            if (remainingEnemies == 0)
-            {
-                nextWaveButton.SetActive(true);
-            }
+            nextWaveButton.SetActive(true);
         }
     }
 }

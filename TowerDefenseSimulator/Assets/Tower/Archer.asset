@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a873a62e68f89b0479e4a686d1cc9e6d, type: 3}
+  m_Name: Archer
+  m_EditorClassIdentifier: 
+  displayName: Archery Range
+  cost: 300
+  range: 2.5
+  icon: {fileID: 21300000, guid: d780e301f3949364485b5b31e219c5bd, type: 3}
+  spawnPrefab: {fileID: 11084839920864303, guid: 51076d49fc9b4f545804f1a196efeab4, type: 3}

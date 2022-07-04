@@ -24,6 +24,16 @@ public class GameManager : MonoBehaviour
     // Singleton
     public static GameManager instance;
 
+    void OnEnable ()
+    {
+        Enemy.OnDestroyed += OnEnemyDestroyed;
+    }
+
+    void onDisabled  ()
+    {
+        Enemy.OnDestroyed -= OnEnemyDestroyed;
+    }
+
     void Awake()
     {
         instance = this;
@@ -86,14 +96,17 @@ public class GameManager : MonoBehaviour
         endScreen.SetEndScreen(true, waveSpawner.curWave);
     }
 
-    
-    //public void OnEnemyDestroyed()
-    //{
-    //    if (!gameActive) { return; }
 
-    //    if (waveSpawner.remainingEnemies == 0 && waveSpawner.curWave == waveSpawner.waves.Length)
-    //    {
-    //        WinGame();
-    //    }
-    //}
+    public void OnEnemyDestroyed()
+    {
+        if (!gameActive) 
+        { 
+            return; 
+        }
+
+        if (waveSpawner.remainingEnemies == 0 && waveSpawner.curWave == waveSpawner.waves.Length)
+        {
+            WinGame();
+        }
+    }
 }

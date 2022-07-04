@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a873a62e68f89b0479e4a686d1cc9e6d, type: 3}
   m_Name: CastleTower
   m_EditorClassIdentifier: 
-  displayName: Castle Tower
+  displayName: Watch Tower
   cost: 500
   range: 2
   icon: {fileID: 21300000, guid: a7098ab6d37f8c1429e68d60515f2764, type: 3}

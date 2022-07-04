@@ -18,22 +18,22 @@ MonoBehaviour:
     spawnDelay: 0
     spawnRate: 1
   - enemyPrefab: {fileID: 2229845396209512338, guid: 6384374895869cc4b90eb8965f3f672d, type: 3}
-    spawnCount: 2
-    spawnDelay: 1
-    spawnRate: 1
+    spawnCount: 5
+    spawnDelay: 0
+    spawnRate: 0.6
   - enemyPrefab: {fileID: 2229845396209512338, guid: 095f352b225a0cd4597fdb248d950a7b, type: 3}
-    spawnCount: 2
-    spawnDelay: 1.5
-    spawnRate: 1
+    spawnCount: 5
+    spawnDelay: 0
+    spawnRate: 0.6
   - enemyPrefab: {fileID: 2229845396209512338, guid: 6384374895869cc4b90eb8965f3f672d, type: 3}
-    spawnCount: 2
-    spawnDelay: 1
+    spawnCount: 5
+    spawnDelay: 0
     spawnRate: 1
   - enemyPrefab: {fileID: 2229845396209512338, guid: cb51afa65cf64024e85e96a280fbfa95, type: 3}
     spawnCount: 5
-    spawnDelay: 1
+    spawnDelay: 0
     spawnRate: 1
   - enemyPrefab: {fileID: 2229845396209512338, guid: 095f352b225a0cd4597fdb248d950a7b, type: 3}
     spawnCount: 3
-    spawnDelay: 1.5
+    spawnDelay: 0
     spawnRate: 1
