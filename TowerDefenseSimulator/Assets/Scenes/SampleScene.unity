@@ -5485,7 +5485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  money: 500
+  money: 750
   healthAndMoneyText: {fileID: 1475443460}
   enemyPath: {fileID: 264491545}
   towerPlacement: {fileID: 962193430}
@@ -5540,7 +5540,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 226704f1fe2ffcf46876c29abca931ad, type: 2}
   - {fileID: 11400000, guid: af511f52bccb6ca4999cd7b201aad73a, type: 2}
   - {fileID: 11400000, guid: 33f98f0843c456d4a8e234202f9a195b, type: 2}
-  - {fileID: 11400000, guid: a1e511cfafdfde644ae4e823ae432d73, type: 2}
+  - {fileID: 11400000, guid: f8e08a951515a5d4f8baebfbb051d3d3, type: 2}
+  - {fileID: 11400000, guid: 4bd0cea3a7a7b604f99b3437013fadf1, type: 2}
   curWave: 0
   remainingEnemies: 0
   enemySpawnPos: {fileID: 2081545064}
